@@ -3,7 +3,12 @@
 <%= form_for @artist  do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
+  <%= f.label :genre %>
+  <%= f.collection_select :genre, Genre.all, :id, :name %>
+  <%= f.label :artist %>
+  <%= f.collection_select :artist, Artist.all, :id, :name %>
   <br />
 
   <%= f.submit %>
 <% end %>
+ <!-- <%= f.collection_select :category, Category.all, :id, :name %> -->
