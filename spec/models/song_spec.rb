@@ -29,6 +29,7 @@ RSpec.describe Song, type: :model do
     it 'returns the artist name' do
       song = Song.new
       song.artist_name = 'Rock Hudson'
+      # byebug
       expect(song.artist_name).to eq 'Rock Hudson'
     end
   end
